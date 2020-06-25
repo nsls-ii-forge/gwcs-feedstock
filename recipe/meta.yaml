@@ -1,0 +1,51 @@
+{% set name = "gwcs" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "f07c6a4a6bdca032538c6af7cbb396120d2d2645ffedf41f62f14d9753d54da2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python >=3
+    - pip
+    - setuptools_scm
+  run:
+    - python >=3
+    - asdf
+    - astropy >=4.0
+    - numpy
+
+test:
+  imports:
+    - gwcs
+    - gwcs.tags
+
+about:
+  home: https://gwcs.readthedocs.io/en/latest/
+  license: BSD 3-clause
+  license_family: BSD
+  license_file: licenses/LICENSE.rst
+  summary: Generalized World Coordinate System
+  description: |
+    GWCS takes a general approach to WCS. It supports a data model which
+    includes the entire transformation pipeline from input coordinates
+    (detector by default) to world coordinates. Transformations can be
+    chained, joined or combined with arithmetic operators using the flexible
+    framework of compound models in astropy modeling. In the case of a
+    celestial output frame coordinates provides further transformations
+    between standard coordinate frames. Spectral output coordinates are
+    instances of astropy Quantity and are transformed to other units with the
+    tools in that package.
+  doc_url: https://gwcs.readthedocs.io
+  dev_url: https://github.com/spacetelescope/gwcs
