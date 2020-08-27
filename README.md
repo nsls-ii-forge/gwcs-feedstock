@@ -5,7 +5,7 @@ Home: https://gwcs.readthedocs.io/en/latest/
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Generalized World Coordinate System
 

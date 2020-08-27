@@ -3,4 +3,4 @@ channel_sources:
 channel_targets:
 - nsls2forge main
 docker_image:
-- condaforge/linux-anvil-comp7
+- nsls2/nsls2forge:latest
