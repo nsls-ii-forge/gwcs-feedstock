@@ -5,9 +5,13 @@ Home: https://gwcs.readthedocs.io/en/latest/
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/gwcs-feedstock/blob/master/LICENSE.txt)
 
 Summary: Generalized World Coordinate System
+
+Development: https://github.com/spacetelescope/gwcs
+
+Documentation: https://gwcs.readthedocs.io
 
 GWCS takes a general approach to WCS. It supports a data model which
 includes the entire transformation pipeline from input coordinates
