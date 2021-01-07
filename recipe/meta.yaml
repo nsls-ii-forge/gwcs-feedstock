@@ -25,6 +25,7 @@ requirements:
     - asdf
     - astropy >=4.0
     - numpy
+    - scipy
 
 test:
   imports:
